@@ -1,0 +1,27 @@
+.card {
+    border-width: 2px; /* Ajuste a largura da borda do card */
+    border-radius: 15px; /* Arredondamento dos cantos do card */
+  }
+  
+  .card-title {
+    font-size: 1.8rem; /* Tamanho da fonte do título */
+    font-weight: bold; /* Negrito no título */
+  }
+  
+  .card-text {
+    font-size: 1.2rem; /* Tamanho da fonte do texto do card */
+  }
+  
+  .modal-header {
+    border-bottom: 0; /* Remover borda inferior do cabeçalho do modal */
+  }
+  
+  .modal-footer button {
+    border-radius: 10px; /* Arredondamento dos cantos dos botões do modal footer */
+    font-weight: bold; /* Negrito nos textos dos botões */
+  }
+  
+  .modal-body {
+    font-size: 1.2rem; /* Tamanho da fonte do texto do modal body */
+  }
+  

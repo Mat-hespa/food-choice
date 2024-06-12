@@ -1,0 +1,78 @@
+<!-- <app-header></app-header> -->
+<div class="container mt-4">
+  <div class="row justify-content-center">
+    <div class="col-lg-4 mb-4"> 
+      <div class="card text-white bg-danger"> <!-- Utilizando classes do Bootstrap para fundo vermelho -->
+        <div class="image-wrapper">
+          <img src="../../assets/sushimares.jpeg" class="card-img-top img-fluid" alt="Sushi Mares">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">SUSHI MARES</h5>
+          <p class="card-text">Faça sua escolha!!!</p>
+          <button (click)="openModal('SUSHI MARES')" class="btn btn-light" style="background-color: #ffffff;">Avançar</button> <!-- Botão claro com texto preto -->
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 mb-4"> 
+      <div class="card text-white bg-danger"> <!-- Utilizando classes do Bootstrap para fundo vermelho -->
+        <div class="image-wrapper">
+          <img src="../../assets/tabatem.webp" class="card-img-top img-fluid" alt="Tabatem">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">TABATEM</h5>
+          <p class="card-text">Faça sua escolha!!!</p>
+          <button (click)="openModal('TABATEM')" class="btn btn-light" style="background-color: #ffffff;">Avançar</button> <!-- Botão claro com texto preto -->
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 mb-4"> 
+      <div class="card text-white bg-danger"> <!-- Utilizando classes do Bootstrap para fundo vermelho -->
+        <div class="image-wrapper">
+          <img src="../../assets/casa do sushi.png" class="card-img-top img-fluid" alt="Casa do Sushi">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">CASA DO SUSHI</h5>
+          <p class="card-text">Faça sua escolha!!!</p>
+          <button (click)="openModal('CASA DO SUSHI')" class="btn btn-light" style="background-color: #ffffff;">Avançar</button> <!-- Botão claro com texto preto -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Escolha Final -->
+<ng-template #myModal>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-danger text-white">
+        <h5 class="modal-title">Escolha final!</h5>
+        <button type="button" class="btn-close" aria-label="Close" (click)="closeModal()"></button>
+      </div>
+      <div class="modal-body">
+        <p>Você tem certeza que deseja escolher {{ selectedPlace }} para jantar?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="closeModal()">Cancelar</button>
+        <button type="button" class="btn btn-light"(click)="openDetailsModal()">Confirmar</button>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<!-- Modal Detalhes do Restaurante -->
+<ng-template #detailsModal>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-danger text-white">
+        <h5 class="modal-title">{{ selectedPlace }}</h5>
+        <button type="button" class="btn-close" aria-label="Close" (click)="closeDetailsModal()"></button>
+      </div>
+      <div class="modal-body">
+        <div class="image-wrapper">
+          <img [src]="selectedPlaceImage" class="img-fluid" alt="{{ selectedPlace }}">
+        </div>
+        <p>Mostre o QRCODE do estabelecimento {{ selectedPlace }} para o seu namorado efetuar a compra!!! </p>
+      </div>
+    </div>
+  </div>
+</ng-template>
